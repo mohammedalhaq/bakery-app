@@ -1,0 +1,36 @@
+img {
+    border-radius: 5px 5px 0 0;
+    height: 12em;
+    object-fit: cover;
+}
+
+.name{
+    padding-left: 1rem;
+    text-align: start;
+    font-weight: 600;
+}
+
+.description{
+    font-size: small;
+
+}
+
+.item{
+    margin: 2rem;
+    display: inline-block;
+    width: min-content;
+    background-color: rgb(211, 211, 211);
+}
+
+.price{
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: white;
+    background-color: cornflowerblue;
+    border-radius: 0 0 5px 5px;
+}
+
+.price:hover{
+    background-color: rgb(86, 127, 204);
+}

@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+li {
+  display: inline;
+  margin-right: 2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+footer {
+  height: 25em;
+  display: block;
+  color: white;
+  background-color: #383838;
+}
