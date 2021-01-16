@@ -30,14 +30,12 @@ class Menu extends React.Component {
             <MenuItem key={key} name={item.item_name} description={item.description} price={item.price} photo={item.photo} />);
             return (
                 <div>
-                    <Header />
                     {menuItems}
                 </div>
             );
         } catch (error) {
             return (
                 <div>
-                    <Header />
                 </div>
             );
         }

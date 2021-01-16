@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Home extends React.Component {
+class Contact extends React.Component {
     constructor(){
         super()
     }
@@ -8,10 +8,10 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                Home
+                Contact
             </div>
         )
     }
 }
 
-export default Home;
+export default Contact;
