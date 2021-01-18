@@ -9,24 +9,27 @@ class Header extends React.Component {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/">
+                            <Link to="/" style={{ textDecoration: 'none' }}>
                                 Home
                                 </Link>
                         </li>
                         <li>
-                            <Link to="/menu">
+                            <Link to="/menu" style={{ textDecoration: 'none' }}>
                                 Menu
                                 </Link>
                         </li>
                         <li>
-                            <Link to="/gallery">
+                            <Link to="/gallery" style={{ textDecoration: 'none' }}>
                                 Gallery
                                 </Link>
                         </li>
                         <li>
-                            <Link to="/contact">
+                            <Link to="/contact" style={{ textDecoration: 'none' }}>
                                 Contact
                                 </Link>
+                        </li>
+                        <li>
+                            Checkout {this.props.subtotal}
                         </li>
                     </ul>
                 </nav>

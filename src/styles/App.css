@@ -1,14 +1,21 @@
-.App {
-  text-align: center;
-}
-
-li {
-  display: inline;
-  margin-right: 2rem;
+nav {
+  background-color: grey;
+  width: 100%;
+  margin: 0;
+  padding: 0; 
 }
 
 ul {
+  text-align: center;
+  text-decoration: none;
   list-style-type: none;
+  display: block;
+}
+
+nav li {
+  background-color: grey;
+  display: inline;
+  padding-right: 2rem;
 }
 
 footer {
@@ -16,4 +23,14 @@ footer {
   display: block;
   color: white;
   background-color: #383838;
+}
+
+header{
+  text-align: center;
+  font-size: x-large;
+}
+
+.menu{
+  margin-left: 5r em;
+  margin-right: 5rem;
 }
