@@ -1,0 +1,40 @@
+.contactForm{
+ /* Remove background fill */
+border: 5px solid #D547DD;
+margin-left: 25px;
+margin-right: 25px;
+margin-top: 25px;
+  background-color: #fcdc7c;
+}
+
+label{
+  display: block;
+  font-family: "Trebuchet MS", sans-serif;
+   font-size: 1em;
+   letter-spacing: -2px;
+   text-transform: uppercase;
+}
+
+.subject{
+  display:block;
+   width: 300px;
+   height: 300px;
+   margin-left:430px;
+ }
+
+ input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.subject{
+margin-top: 25px;
+}
+
+input[name="subject"] {
+  height:200px;
+  margin-bottom: 25px;
+}

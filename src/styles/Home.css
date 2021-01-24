@@ -1,0 +1,45 @@
+.mainpage{
+    background-color: #fcdc7c;
+    height: 85.6vh;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  
+  .mainpagelogo{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    margin-top: -13rem;
+  }
+  
+  
+  .header-title {
+    font-family: Fjalla One;
+    font-size: 10rem;
+    color: #83b9f4;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .mainpagelogo2{
+    height: 40rem;
+    margin-left: -3.5rem;
+  }
+  
+  .tagline {
+    font-family: Fjalla One;
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    padding-top: 4rem;
+  }

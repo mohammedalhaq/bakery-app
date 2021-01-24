@@ -1,36 +1,58 @@
-nav {
-  background-color: grey;
-  width: 100%;
-  margin: 0;
-  padding: 0; 
-}
-
-ul {
-  text-align: center;
-  text-decoration: none;
-  list-style-type: none;
-  display: block;
-}
-
-nav li {
-  background-color: grey;
-  display: inline;
-  padding-right: 2rem;
-}
-
 footer {
-  height: 20em;
+  height: 5em;
   display: block;
   color: white;
   background-color: #383838;
+  margin-top: -1.2rem;
+  height: 6.5vh;
 }
 
-header{
+label{
+display: block;
+text-align: center;
+
+}
+input{
+margin-left: auto;
+margin-right: auto;
+display: block;
+
+}
+
+a.facebook {
+  color: #4968ad;
+  padding-right: 50px;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+.header{
   text-align: center;
-  font-size: x-large;
+  padding-top: 14rem;
 }
 
-.menu{
-  margin-left: 5r em;
-  margin-right: 5rem;
+label{
+  display: block;
+  font-family: "Trebuchet MS", sans-serif;
+   font-size: 1em;
+   letter-spacing: -2px;
+   text-transform: uppercase;
+}
+
+.subject{
+  display:block;
+   width: 300px;
+   height: 300px;
+   margin-left:430px;
+ }
+
+ input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

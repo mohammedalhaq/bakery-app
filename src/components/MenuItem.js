@@ -1,27 +1,19 @@
 import React from 'react';
 import '.././styles/Menu.css';
+import { useSelector, useDispatch } from 'react-redux'
+import { addToCart } from '../actions';
 
-class MenuItem extends React.Component {
-    constructor(props){
-        super(props)
-        
-        this.addPrice = this.addPrice.bind(this);
-    }
+function MenuItem(props) {
+    const dispatch = useDispatch();
 
-    addPrice(){
-        this.props.parentCallback(this.props.price);
-    }
-
-    render() {
-        return (
-            <div className="item">
-                <img src={this.props.photo}></img>
-                <p className="name">{this.props.name}</p>
-                <p className="description">{this.props.description}</p>
-                <button onClick={this.addPrice} className="price">${this.props.price}</button>
-            </div>
-        );
-    }
+    return (
+        <div className="item">
+            <img src={props.photo}></img>
+            <p className="name">{props.name}</p>
+            <p className="description">{props.description}</p>
+            <button onClick={() => dispatch(addToCart(props.id))} className="price">${props.price}</button>
+        </div>
+    );
 }
 
 export default MenuItem;

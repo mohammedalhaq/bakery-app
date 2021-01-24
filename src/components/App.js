@@ -1,12 +1,15 @@
 import React from'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import '.././styles/App.css';
+import '.././styles/App.css';
+import '.././styles/Contact.css';
 import Menu from './Menu';
 import Home from "./Home";
 import Footer from './Footer';
 import Header from './Header';
 import Gallery from './Gallery';
 import Contact from './Contact';
+import Checkout from './Checkout';
 
 class App extends React.Component{
   constructor(){
@@ -38,11 +41,14 @@ class App extends React.Component{
             <Route path="/contact">
               <Contact />
             </Route>
+            <Route path="/checkout">
+              <Checkout subtotal={this.state.subtotal} />
+            </Route>
           </Switch>
           <Footer />
         </Router>
       </div>
-    );  
+    );
   }
 }
 
