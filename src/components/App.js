@@ -1,33 +1,20 @@
 import React from'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import '.././styles/App.css';
-import '.././styles/App.css';
-import '.././styles/Contact.css';
 import Menu from './Menu';
 import Home from "./Home";
 import Footer from './Footer';
 import Header from './Header';
-import Gallery from './Gallery';
+import About from './About';
 import Contact from './Contact';
 import Checkout from './Checkout';
 
 class App extends React.Component{
-  constructor(){
-    super();
-    this.state = {
-      subtotal: 0
-    }
-  }
-
-  addPrice = (price) => {
-    this.setState({subtotal: this.state.subtotal+price})
-  }
-
   render() {
     return (
       <div>
         <Router>
-          <Header subtotal={this.state.subtotal}/>
+          <Header />
           <Switch>
             <Route exact path="/">
               <Home />
@@ -35,14 +22,14 @@ class App extends React.Component{
             <Route path="/menu">
               <Menu parentCallback={this.addPrice}/>
             </Route>
-            <Route path="/gallery">
-              <Gallery />
+            <Route path="/about">
+              <About />
             </Route>
             <Route path="/contact">
               <Contact />
             </Route>
             <Route path="/checkout">
-              <Checkout subtotal={this.state.subtotal} />
+              <Checkout />
             </Route>
           </Switch>
           <Footer />

@@ -5,13 +5,14 @@ import { addToCart } from '../actions';
 
 function MenuItem(props) {
     const dispatch = useDispatch();
+    const menuItem = props;
 
     return (
-        <div className="item">
-            <img src={props.photo}></img>
-            <p className="name">{props.name}</p>
-            <p className="description">{props.description}</p>
-            <button onClick={() => dispatch(addToCart(props.id))} className="price">${props.price}</button>
+        <div className="menuItem">
+            <img className="menuImg" src={props.photo}></img>
+            <p className="menuName">{props.name}</p>
+            <p className="menuDesc">{props.description}</p>
+            <button onClick={() => dispatch(addToCart(menuItem))} className="price">${props.price}</button>
         </div>
     );
 }

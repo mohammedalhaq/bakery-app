@@ -1,21 +1,21 @@
-img {
+.menuImg {
     border-radius: 5px 5px 0 0;
     height: 12em;
     object-fit: cover;
 }
 
-.name{
+.menuName{
     padding-left: 1rem;
     text-align: start;
     font-weight: 600;
 }
 
-.description{
+.menuDesc{
     font-size: small;
 
 }
 
-.item{
+.menuItem{
     margin: 2rem;
     display: inline-block;
     width: min-content;

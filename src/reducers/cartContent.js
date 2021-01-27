@@ -1,8 +1,3 @@
-/*
-https://webmobtuts.com/frontend-development/building-shopping-cart-with-reactjs-and-redux-part-1/
-https://webmobtuts.com/frontend-development/building-shopping-cart-with-reactjs-and-redux-part-2/
-https://www.pluralsight.com/guides/add-large-amounts-of-data-in-the-app-state-in-redux
-*/
 const initialCart = {
     menu: [],
     cart: []
@@ -25,11 +20,10 @@ const cartContent = (state = initialCart, action) => {
                 cart: cart
             };
         case "REMOVE_FROM_CART":
-            cart.pop(action.payload);
             return {
                 ...state,
-                cart: cart
-            };       
+                cart: cart.filter(item => item.id !== action.payload.id)
+            };
         case "UPDATE_ITEM":
             return state.cart;
         default:

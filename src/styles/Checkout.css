@@ -1,0 +1,21 @@
+.cart {
+    padding: 1rem;
+    padding-bottom: 5rem;
+}
+
+.cartItem{
+    margin: 4rem;
+    background-color: rgb(216, 216, 216);
+}
+
+.cartImg {
+    padding-right: 2rem;
+    float: left;
+    height: 12rem;
+}
+
+.cartContent{
+    margin-top: 1rem;
+    height: 12rem;
+}
+
