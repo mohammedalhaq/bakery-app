@@ -11,7 +11,7 @@ class Menu extends React.Component {
 
     render() {
         const menuItems = this.props.items.map((item, key) =>
-            <MenuItem key={key} id={item.id} name={item.item_name} description={item.description} price={item.price} photo={item.photo} />);
+            <MenuItem key={key} id={item.id} name={item.item_name} description={item.description} price={item.price} photo={item.photo} quantity={1}/>);
         return (
             <div>
                 <header>Menu</header>

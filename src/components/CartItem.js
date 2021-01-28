@@ -14,7 +14,8 @@ function CartItem(props) {
                 <button onClick={() => dispatch(removeFromCart(cartItem))} style={{ float: 'right' }}>Remove Item</button>
                 <p className="cartName">{props.name}</p>
                 <p className="cartDesc">{props.description}</p>
-                <p className="cartPrice">${props.price}</p>
+                <p>Quantity: {props.quantity}</p>
+                <p className="cartPrice">${props.price*props.quantity}</p>
             </div>
         </div>
     );

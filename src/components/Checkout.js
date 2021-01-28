@@ -20,7 +20,7 @@ class Checkout extends React.Component {
     
     render() {
         const cartItems = this.props.cart.map((item, key) =>
-            <CartItem key={key} id={item.id} name={item.name} description={item.description} price={item.price} photo={item.photo} />
+            <CartItem key={key} id={item.id} name={item.name} description={item.description} price={item.price} photo={item.photo} quantity={item.quantity}/>
         );
 
         this.props.cart.map((item) =>
