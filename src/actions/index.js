@@ -7,26 +7,30 @@ export const fetchMenu = () => dispatch => {
         }));
 }
 
-export const addToCart = id => {
+export const addToCart = item => {
     return {
         type: 'ADD_TO_CART',
-        payload: id
+        payload: item
     }
 }
 
-export const removeFromCart = id => {
+export const removeFromCart = item => {
     return {
         type: 'REMOVE_FROM_CART',
-        payload: id
+        payload: item
     }
 }
 
-export const updateItem = (id, num) => {
+export const addOne = (item, num) => {
     return {
-        type: 'UPDATE_ITEM',
-        payload: {
-            id,
-            num: num
-        }
+        type: 'ADD_ONE',
+        payload: item
+    }
+}
+
+export const removeOne = (item, num) => {
+    return {
+        type: 'REMOVE_ONE',
+        payload: item
     }
 }

@@ -25,18 +25,29 @@ const cartContent = (state = initialCart, action) => {
                 return {
                     ...state,
                     cart: cart.map((item, key) => item.id === action.payload.id ? {
-                        ...item, quantity: item.quantity+1
+                        ...item, quantity: item.quantity + 1
                     } : item)
                 };
-
             }
         case "REMOVE_FROM_CART":
             return {
                 ...state,
                 cart: cart.filter(item => item.id !== action.payload.id)
             };
-        case "UPDATE_ITEM":
-            return state.cart;
+        case "ADD_ONE":
+            return {
+                ...state,
+                cart: cart.map((item, key) => item.id === action.payload.id ? {
+                    ...item, quantity: item.quantity + 1
+                } : item)
+            };
+        case "REMOVE_ONE":
+            return {
+                ...state,
+                cart: cart.map((item, key) => item.id === action.payload.id ? {
+                    ...item, quantity: item.quantity - 1
+                } : item)
+            };
         default:
             return state;
     }

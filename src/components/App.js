@@ -8,6 +8,7 @@ import Header from './Header';
 import About from './About';
 import Contact from './Contact';
 import Checkout from './Checkout';
+import CheckoutForm from './CheckoutForm';
 
 class App extends React.Component{
   render() {
@@ -28,8 +29,11 @@ class App extends React.Component{
             <Route path="/contact">
               <Contact />
             </Route>
-            <Route path="/checkout">
+            <Route exact path="/checkout">
               <Checkout />
+            </Route>
+            <Route path="/checkout/details">
+              <CheckoutForm />
             </Route>
           </Switch>
           <Footer />

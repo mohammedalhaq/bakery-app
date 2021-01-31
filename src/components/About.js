@@ -1,4 +1,5 @@
 import React from 'react';
+import Title from './Title';
 
 class About extends React.Component {
     constructor(){
@@ -8,7 +9,7 @@ class About extends React.Component {
     render() {
         return (
             <div>
-                About
+                <Title title="About" />
             </div>
         )
     }

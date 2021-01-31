@@ -1,10 +1,11 @@
 .cart {
     padding: 1rem;
     padding-bottom: 5rem;
+    margin: 0 6rem 6rem 6rem;
 }
 
 .cartItem{
-    margin: 4rem;
+
     background-color: rgb(216, 216, 216);
 }
 

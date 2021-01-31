@@ -33,7 +33,7 @@ function Header() {
                     </li>
                     <li>
                         <Link to="/checkout" style={{ textDecoration: 'none', color: 'black' }}>
-                            Checkout ({numItems})
+                            Your Cart ({numItems})
                             </Link>
                     </li>
                 </ul>

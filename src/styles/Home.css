@@ -19,7 +19,8 @@
   .header-title {
     font-family: Fjalla One;
     font-size: 10rem;
-    color: #83b9f4;
+    color: white;
+    /*color: #83b9f4;*/
     text-transform: uppercase;
     margin-left: auto;
     margin-right: auto;
