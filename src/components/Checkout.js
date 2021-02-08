@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { connect } from 'react-redux';
 import { fetchMenu } from '../actions/index'
 import CartItem from "./CartItem";
@@ -9,25 +8,29 @@ import Title from './Title';
 
 var total = 0;
 class Checkout extends React.Component {
-    constructor(props) {
-        super()
-
-    }
-
     componentDidMount() {
-
         this.props.fetchMenu();
+/*
+        this.props.cart.map((item) =>
+            total += (item.price * item.quantity)
+        );*/
     }
 
+    componentDidUpdate() {
+        total = 0;
+
+    }
 
     render() {
-        const cartItems = this.props.cart.map((item, key) =>
-            <CartItem key={key} id={item.id} name={item.name} description={item.description} price={item.price} photo={item.photo} quantity={item.quantity} />
+        const cartItems = this.props.cart.map((item, key) => {
+            total += (item.price * item.quantity)
+            return (
+                <CartItem key={key} id={item.id} name={item.name} description={item.description} price={item.price} photo={item.photo} quantity={item.quantity} />
+            )
+        }
         );
 
-        this.props.cart.map((item) =>
-            total += (item.price/3 * item.quantity)
-        );
+
 
         if (cartItems.length > 0) {
             return (
@@ -49,7 +52,7 @@ class Checkout extends React.Component {
         } else {
             return (
                 <div>
-                    <p>
+                    <p className="emptyCart">
                         <Title title="Your cart is empty" />
                     </p>
                 </div>

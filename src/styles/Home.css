@@ -1,18 +1,19 @@
 .mainpage{
-    background-color: #fcdc7c;
-    height: 85.6vh;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
   }
   
   .mainpagelogo{
+    width: 100%;
+    max-width: 37vh;
+    min-width: 300px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     display: flex;
     position: relative;
-    margin-top: -13rem;
   }
   
   
@@ -20,17 +21,11 @@
     font-family: Fjalla One;
     font-size: 10rem;
     color: white;
-    /*color: #83b9f4;*/
     text-transform: uppercase;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     z-index: 1;
-  }
-  
-  .mainpagelogo2{
-    height: 40rem;
-    margin-left: -3.5rem;
   }
   
   .tagline {
@@ -44,3 +39,50 @@
     text-align: center;
     padding-top: 4rem;
   }
+
+  .introduction{
+    background-color: #fcdc7c;
+    font-family: Fjalla One;
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 30rem;
+    height: 60vh;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+
+  .columnLeft {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    min-height: 100%;
+  }
+  
+  .columnRight{
+    margin-right: auto;
+    min-height: 100%;
+    margin-top: 20%;
+  }
+
+  .columnRight h2{
+    font-family: Roboto, sans-serif;
+    line-height: 1vh;
+    letter-spacing: 10px;
+  }
+
+  

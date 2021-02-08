@@ -4,6 +4,7 @@ import '.././styles/App.css';
 import { connect } from 'react-redux';
 import { fetchMenu } from '../actions/index'
 import { Col, Panel } from 'react-bootstrap';
+import '.././styles/MenuItem.css';
 
 class Menu extends React.Component {
     componentDidMount() {
@@ -16,10 +17,16 @@ class Menu extends React.Component {
         return (
             <div>
                 <header className="menuHeader">Order something from our great selection of baked goods!</header>
-                <div className="menu">
-                    {menuItems}
-                </div>
-            </div>
+                <section>
+                    <div className="menu">
+                        <div className="products">
+                            {menuItems}
+
+                        </div>
+                    </div>
+                </section>
+
+            </div >
         );
     }
 }

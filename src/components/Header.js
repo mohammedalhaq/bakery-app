@@ -6,9 +6,9 @@ import { useSelector } from 'react-redux';
 
 function Header() {
     const numItems = useSelector(state => state.items.cart.length);
-    
+
     return (
-        <div>
+        <div className="headerMain">
             <nav>
                 <ul>
                     <li>

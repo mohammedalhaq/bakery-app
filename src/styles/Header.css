@@ -1,23 +1,24 @@
-nav {
-    background-color: #fcdc7c;
-    width: 100%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    height: 3vh;
-  }
+.headerMain {
+  background-color: #fcdc7c;
+  width: 100%;
+  padding-top: 4vh;
+  padding-bottom: 6vh;
+  height: 3vh;
+}
   
-  ul {
-    text-align: center;
-    text-decoration: none;
-    list-style-type: none;
-    display: block;
-    padding: 0;
-    margin: 0;
-  
-  }
-  
-  nav li {
-    background-color: #fcdc7c;
-    display: inline;
-    padding-right: 2rem;
-  }
+ul {
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: large;
+  font-weight: 500;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  background-color: #fcdc7c;
+  display: inline;
+  padding: 2rem;
+}

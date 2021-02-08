@@ -16,7 +16,7 @@ const cartContent = (state = initialCart, action) => {
         case "ADD_TO_CART":
             let tempCart = cart.filter(item => item.id === action.payload.id)
             if (tempCart.length === 0) {
-                cart.push(action.payload);
+                cart.unshift(action.payload);
                 return {
                     ...state,
                     cart: cart
@@ -42,12 +42,25 @@ const cartContent = (state = initialCart, action) => {
                 } : item)
             };
         case "REMOVE_ONE":
-            return {
+            let tempItem = cart.filter(item => item.id === action.payload.id);
+            if (tempItem[0].quantity - 1 <= 0) {
+                return {
+                    ...state,
+                    cart: cart.filter(item => item.id !== action.payload.id)
+                }
+            } else {
+                return {
+                    ...state,
+                    cart: cart.map((item, key) => item.id === action.payload.id ? {
+                        ...item, quantity: item.quantity - 1
+                    } : item)
+                }
+            }
+        case "RESET_CART":
+            return{
                 ...state,
-                cart: cart.map((item, key) => item.id === action.payload.id ? {
-                    ...item, quantity: item.quantity - 1
-                } : item)
-            };
+                cart: []
+            }
         default:
             return state;
     }

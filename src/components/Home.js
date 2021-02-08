@@ -11,6 +11,7 @@ const Home = () => {
                 img='./logo.PNG'
             />
             <Tagline />
+            <Introduction />
         </div>
     )
 }
@@ -37,12 +38,30 @@ const Logo = (props) => {
     )
 }
 
-const Tagline = (props) => {
+const Tagline = () => {
     return (
         <div className='tagline'>
             <span className='taglinetext'>
                 Fresh baked goods delivered to your door
             </span>
+        </div>
+    )
+}
+
+const Introduction = () => {
+    return (
+        <div className="introduction">
+            <h1>HOW TO GET YOUR DELIVERY</h1>
+            <div>
+                <div class='row'>
+                    <div class='column'>
+                        <p>Some Text in Column One</p>
+                    </div>
+                    <div class='column'>
+                        <p>Some Text in Column Two</p>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

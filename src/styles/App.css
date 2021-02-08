@@ -1,10 +1,8 @@
 footer {
-  height: 5rem;
+  height: 10rem;
   display: block;
   color: white;
-  background-color: #383838;
-  margin-top: -1.2rem;
-
+  background-color: #2f2f2f;
 }
 
 .footerContent{
@@ -21,7 +19,6 @@ input{
 margin-left: auto;
 margin-right: auto;
 display: block;
-
 }
 
 a.facebook {

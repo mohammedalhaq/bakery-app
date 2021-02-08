@@ -1,9 +1,13 @@
+import { faRProject } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { connect } from 'react-redux';
+import { resetCart } from '../actions/index';
+import { Redirect } from 'react-router-dom';
 
 class CheckoutForm extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             name: "",
             address: "",
@@ -14,6 +18,12 @@ class CheckoutForm extends React.Component {
         };
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(e) {
+        this.props.resetCart();
+        <Redirect to="/" />
     }
 
     handleChange(e) {
@@ -24,7 +34,7 @@ class CheckoutForm extends React.Component {
         return (
             <div>
                 <div className="form">
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <label>
                             Name
                         <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
@@ -60,4 +70,9 @@ class CheckoutForm extends React.Component {
     }
 }
 
-export default CheckoutForm;
+const mapStateToProps = state => ({
+    cart: state.cart
+});
+
+
+export default connect(mapStateToProps, { resetCart })(CheckoutForm);

@@ -1,5 +1,5 @@
 export const fetchMenu = () => dispatch => {
-    fetch("https://gist.githubusercontent.com/mohammedalhaq/80fc63af2fdea8fb860e2f58934accff/raw/ac034d7ca0b6e642e85cd6db30bcdb57137104fd/gistfile1.txt")
+    fetch("https://gist.githubusercontent.com/mohammedalhaq/80fc63af2fdea8fb860e2f58934accff/raw/6baae5e3f5e20c332d7d0c020353b544529c6e50/gistfile1.txt")
         .then(response => response.json())
         .then(data => dispatch({
             type: "FETCH_MENU",
@@ -32,5 +32,11 @@ export const removeOne = (item, num) => {
     return {
         type: 'REMOVE_ONE',
         payload: item
+    }
+}
+
+export const resetCart = () => {
+    return {
+        type: 'RESET_CART'
     }
 }
