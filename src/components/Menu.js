@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { fetchMenu } from '../actions/index'
 import { Col, Panel } from 'react-bootstrap';
 import '.././styles/MenuItem.css';
+import Title from './Title';
 
 class Menu extends React.Component {
     componentDidMount() {
@@ -16,7 +17,7 @@ class Menu extends React.Component {
             <MenuItem key={key} id={item.id} name={item.item_name} description={item.description} price={item.price} photo={item.photo} quantity={1} />);
         return (
             <div>
-                <header className="menuHeader">Order something from our great selection of baked goods!</header>
+                <Title title="Order something from our great selection of baked goods!" />
                 <section>
                     <div className="menu">
                         <div className="products">

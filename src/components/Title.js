@@ -1,16 +1,27 @@
 import React from 'react';
-import '.././styles/Title.css';
 
 class Title extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
 
+
     render() {
+        const header = {
+            textAlign: 'center',
+            fontSize: 'large',
+            paddingTop: '2rem',
+            textTransform: 'uppercase',
+            fontFamily: 'Fjalla One'
+        }
+    
         return (
-            <header>
-                {this.props.title}
-            </header>
+            <div>
+                <header style={header}>
+                    {this.props.title}
+                </header>
+                <hr style={{width: '90%'}}/>
+            </div>
         )
     }
 }

@@ -31,7 +31,7 @@ function Header() {
                             Contact
                                 </Link>
                     </li>
-                    <li>
+                    <li style={{float: "right", marginTop: "-2rem"}}>
                         <Link to="/checkout" style={{ textDecoration: 'none', color: 'black' }}>
                             Your Cart ({numItems})
                             </Link>

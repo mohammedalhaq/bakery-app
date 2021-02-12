@@ -10,10 +10,10 @@ var total = 0;
 class Checkout extends React.Component {
     componentDidMount() {
         this.props.fetchMenu();
-/*
-        this.props.cart.map((item) =>
-            total += (item.price * item.quantity)
-        );*/
+        /*
+                this.props.cart.map((item) =>
+                    total += (item.price * item.quantity)
+                );*/
     }
 
     componentDidUpdate() {
@@ -27,25 +27,27 @@ class Checkout extends React.Component {
             return (
                 <CartItem key={key} id={item.id} name={item.name} description={item.description} price={item.price} photo={item.photo} quantity={item.quantity} />
             )
-        }
-        );
+        });
 
 
 
         if (cartItems.length > 0) {
             return (
-                <div className="cart">
-                    <Title title="Your Cart" />
-                    {cartItems}
-                    <div style={{ float: 'right' }}>
-                        <p>Subtotal  ${total}</p>
-                        <p>GST/HST  $0.00</p>
+                <div>
+                    <div className="total" style={{ float: 'right' }}>
+                        <p>Subtotal  ${total.toFixed(2)}</p>
+                        <p>Tax  $0.00</p>
                         <p>Delivery Fee  $0.00</p>
-                        <button>
+                        <p>Total  ${total.toFixed(2)}</p>
+                        <button className="checkout">
                             <Link to="/checkout/details" style={{ textDecoration: 'none', color: 'black' }}>
                                 Checkout
-                        </Link>
+                                    </Link>
                         </button>
+                    </div>
+                    <div className="cart">
+                        <Title title="Your Cart" />
+                        {cartItems}
                     </div>
                 </div>
             )
