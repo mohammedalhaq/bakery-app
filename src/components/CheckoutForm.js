@@ -1,9 +1,10 @@
-import { faRProject } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { connect } from 'react-redux';
 import { resetCart } from '../actions/index';
 import { Redirect } from 'react-router-dom';
+import CartItem from './CartItem';
+import '.././styles/Form.css';
+import Title from './Title';
 
 class CheckoutForm extends React.Component {
     constructor(props) {
@@ -14,7 +15,9 @@ class CheckoutForm extends React.Component {
             country: "",
             province: "",
             city: "",
-            postal: ""
+            postal: "",
+            phone: "",
+            complete: false
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -23,7 +26,12 @@ class CheckoutForm extends React.Component {
 
     handleSubmit(e) {
         this.props.resetCart();
-        <Redirect to="/" />
+        this.setState({
+            complete: false
+        });
+        return (
+            <Redirect to="/" />
+        )
     }
 
     handleChange(e) {
@@ -31,48 +39,70 @@ class CheckoutForm extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <div className="form">
-                    <form onSubmit={this.handleSubmit}>
-                        <label>
-                            Name
+        const cartItems = this.props.cart.map((item, key) => {
+            return (
+                <CartItem key={key} id={item.id} name={item.name} description={item.description} price={item.price} photo={item.photo} quantity={item.quantity} summary={true} />
+            )
+        });
+        if (this.state.complete == false) {
+            return (
+                <div >
+                    <Title title="Checkout" />
+                    <div style={{ marginTop: '2rem' }}>
+                        <div className="summary" style={{ paddingBottom: '6rem', height: 'fitContent' }}>
+                            {cartItems}
+                        </div>
+                        <div className="form">
+                            <form onSubmit={this.handleSubmit}>
+                                <label>
+                                    Name
                         <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-                        </label>
-                        <label>
-                            Address
+                                </label>
+                                <label>
+                                    Address
                         <input type="text" name="address" value={this.state.address} onChange={this.handleChange} />
-                        </label>
-                        <label>
-                            Postal Code
+                                </label>
+                                <label>
+                                    Postal Code
                         <input type="text" name="postal" value={this.state.postal} onChange={this.handleChange} />
-                        </label>
-                        <label>
-                            Country
+                                </label>
+                                <label>
+                                    Country
                         <input type="text" name="country" value={this.state.country} onChange={this.handleChange} />
-                        </label>
-                        <label>
-                            Province
+                                </label>
+                                <label>
+                                    Province
                         <input type="text" name="province" value={this.state.province} onChange={this.handleChange} />
-                        </label>
-                        <label>
-                            City
+                                </label>
+                                <label>
+                                    City
                         <input type="text" name="city" value={this.state.city} onChange={this.handleChange} />
-                        </label>
-                        <input type="submit" value="Continue to billing" />
-                    </form>
+                                </label>
+                                <label>
+                                    Phone
+                        <input type="text" name="phone" value={this.state.phone} onChange={this.handleChange} />
+                                </label>
+                                <input type="submit" value="Continue to billing" />
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div className="summary">
-
+            )
+        } else {
+            return (
+                <div>
+                    <Title title="Your order has been placed" />
                 </div>
-            </div>
-        )
+            )
+        }
     }
 }
 
-const mapStateToProps = state => ({
-    cart: state.cart
-});
+const mapStateToProps = state => {
+    return {
+        cart: state.items.cart
+    }
+};
 
 
 export default connect(mapStateToProps, { resetCart })(CheckoutForm);

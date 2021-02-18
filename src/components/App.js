@@ -21,7 +21,7 @@ class App extends React.Component {
               <Home />
             </Route>
             <Route path="/menu">
-              <Menu parentCallback={this.addPrice} />
+              <Menu />
             </Route>
             <Route path="/about">
               <About />

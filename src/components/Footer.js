@@ -7,7 +7,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <footer>
+      <footer style={{clear: 'both', position: 'relative', left: 0, bottom: 0, width: '100%', height: '12vh', marginTop: '2rem'}}>
         <div className="footerContent">
           <h3>Reach Us</h3>
           <a href="https://www.facebook.com" className="facebook">

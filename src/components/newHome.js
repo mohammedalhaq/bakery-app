@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className="mainpage">
             <Introduction />
-            {/* <Pagetwo /> */}
+            <Pagetwo />
         </div>
     )
 }
@@ -49,9 +49,37 @@ const Introduction = () => {
 
 const Pagetwo = () => {
     return (
-        <div>
+        <div className="pagetwo">
             <h1>How it works</h1>
-        </div>
+            <div className='columns' style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20 }}>
+                <div>
+                    <img src='./shop.png' />
+                </div>
+                <div>
+                    <img src='./bake.png' />
+                </div>
+                <div>
+                    <img src='./deliver.png' />
+                </div>
+            </div>
+            <div className='columns' style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20 }}>
+                <div>
+                    <p>
+                        Purchase any bakery items from our Menu page
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        We will bake it with love in our shop
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        It will be delivered to you with extra care
+                    </p>
+                </div>
+            </div>
+        </div >
     )
 }
 

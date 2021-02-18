@@ -34,10 +34,12 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .card .box p{
-    margin: 10x 0;
+    margin: 8x 0;
     line-height: 1.5;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -45,6 +47,7 @@
 }
 
 .card .box h4{
+    margin: 0;
     color: crimson;
 }
 
