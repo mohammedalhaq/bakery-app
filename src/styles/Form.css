@@ -2,7 +2,6 @@
     width: 30%;
     float: right;
     margin-right: 6rem;
-    margin-left: -100rem;
 }
 
 .summary .cartItem{
@@ -12,10 +11,11 @@
 
 .summary .cartImg{
     float: left;
-    height: 8rem;
-    width: 8rem;
+    height: 6rem;
+    width: 6rem;
     object-fit: cover;
     margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
 .summary .cartContent{
@@ -29,13 +29,19 @@
 }
 
 .form{
-    width: 70%;
     margin: auto;
-    align-items: center;
     height: 100%;
-
 }
 
-input{
-    width: 40%;
+.form label{
+    margin: auto;
+    margin-bottom: 0.5rem;
+    width: 15%;
+}
+
+.form input[type='submit']{
+    background-color: #706ee2;
+    width: 15%;
+    margin-top: 1rem;
+
 }

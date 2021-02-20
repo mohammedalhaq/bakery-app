@@ -27,7 +27,7 @@ class CheckoutForm extends React.Component {
     handleSubmit(e) {
         this.props.resetCart();
         this.setState({
-            complete: false
+            complete: true
         });
         return (
             <Redirect to="/" />
@@ -49,7 +49,7 @@ class CheckoutForm extends React.Component {
                 <div >
                     <Title title="Checkout" />
                     <div style={{ marginTop: '2rem' }}>
-                        <div className="summary" style={{ paddingBottom: '6rem', height: 'fitContent' }}>
+                        <div className="summary" style={{ paddingBottom: '4rem', height: 'fitContent' }}>
                             {cartItems}
                         </div>
                         <div className="form">
@@ -90,7 +90,7 @@ class CheckoutForm extends React.Component {
             )
         } else {
             return (
-                <div>
+                <div> 
                     <Title title="Your order has been placed" />
                 </div>
             )
