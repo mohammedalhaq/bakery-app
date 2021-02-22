@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchMenu } from '../actions/index'
+import { fetchMenu } from '../../actions/index'
 import CartItem from "./CartItem";
-import '.././styles/Checkout.css';
+import './Checkout.css';
 import { Link } from 'react-router-dom';
-import Title from './Title';
+import Title from '.././Title';
 
 var total = 0;
 class Checkout extends React.Component {

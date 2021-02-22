@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux'
-import { addToCart } from '../actions';
-import '.././styles/MenuItem.css';
+import { addToCart } from '../../actions';
+import './MenuItem.css';
 
 function MenuItem(props) {
     const dispatch = useDispatch();

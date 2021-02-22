@@ -1,7 +1,7 @@
 import React from 'react';
-import '.././styles/App.css';
+import '../App/App.css';
 import { Link } from 'react-router-dom';
-import '.././styles/Header.css';
+import './Header.css';
 import { useSelector } from 'react-redux';
 
 function Header() {

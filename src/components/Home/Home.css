@@ -50,8 +50,9 @@
     margin-left: auto;
     margin-right: auto;
     min-height: 30rem;
-    height: 78.4vh;
+    height: 78vh;
     object-fit:cover;
+    margin-bottom: -2.5rem;
   }
 
   .row {
@@ -96,12 +97,12 @@
     font-size: 3em;
     letter-spacing: 3px;
     text-align: center;
+    background-image: linear-gradient(#fcdc7c, white);
   }
 
-  .pagetwo p{
-    vertical-align: baseline;
-    text-align: center;
-    align-self:center
+  .pagetwo p{ 
+    position: relative;
+    bottom: 8rem;
   }
 
 

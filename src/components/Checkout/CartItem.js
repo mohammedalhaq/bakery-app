@@ -1,5 +1,5 @@
 import React from 'react';
-import { removeFromCart, addOne, removeOne } from '../actions';
+import { removeFromCart, addOne, removeOne } from '../../actions';
 import { useDispatch } from 'react-redux'
 
 function CartItem(props) {

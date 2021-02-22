@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from "google-maps-react";
-import '.././styles/Contact.css';
-import Title from './Title';
+import './Contact.css';
+import Title from '.././Title';
 
 class Contact extends React.Component {
   constructor() {

@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
-import '.././styles/App.css';
-import Menu from './Menu';
-import Home from "./newHome";
-import Footer from './Footer';
-import Header from './Header';
-import About from './About';
-import Contact from './Contact';
-import Checkout from './Checkout';
-import CheckoutForm from './CheckoutForm';
+import './App.css';
+import Menu from '../Menu/Menu';
+import Home from "../Home/newHome";
+import Footer from '.././Footer';
+import Header from '../Header/Header';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
+import Checkout from '../Checkout/Checkout';
+import CheckoutForm from '../Checkout/CheckoutForm';
 
 class App extends React.Component {
   render() {

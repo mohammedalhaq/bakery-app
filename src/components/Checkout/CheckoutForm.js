@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { resetCart } from '../actions/index';
+import { resetCart } from '../../actions/index';
 import { Redirect } from 'react-router-dom';
 import CartItem from './CartItem';
-import '.././styles/Form.css';
-import Title from './Title';
+import './Form.css';
+import Title from '.././Title';
 
 class CheckoutForm extends React.Component {
     constructor(props) {

@@ -1,11 +1,11 @@
 import React from 'react';
 import MenuItem from "./MenuItem";
-import '.././styles/App.css';
+import '../App/App.css';
 import { connect } from 'react-redux';
-import { fetchMenu } from '../actions/index'
+import { fetchMenu } from '../../actions/index'
 import { Col, Panel } from 'react-bootstrap';
-import '.././styles/MenuItem.css';
-import Title from './Title';
+import './MenuItem.css';
+import Title from '.././Title';
 
 class Menu extends React.Component {
     componentDidMount() {
