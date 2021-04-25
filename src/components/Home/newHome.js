@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className="mainpage">
             <Introduction />
-            <Pagetwo />
+            {/* <Pagetwo /> */}
         </div>
     )
 }
@@ -46,7 +46,7 @@ const Introduction = () => {
         </div>
     )
 }
-
+/*
 const Pagetwo = () => {
     return (
         <div className="pagetwo">
@@ -82,5 +82,6 @@ const Pagetwo = () => {
         </div >
     )
 }
+**/
 
 export default Home;

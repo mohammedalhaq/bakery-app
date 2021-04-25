@@ -5,6 +5,7 @@ import CartItem from "./CartItem";
 import './Checkout.css';
 import { Link } from 'react-router-dom';
 import Title from '.././Title';
+import { Button } from '@material-ui/core';
 
 var total = 0;
 class Checkout extends React.Component {
@@ -22,6 +23,7 @@ class Checkout extends React.Component {
     }
 
     render() {
+        total=0;
         const cartItems = this.props.cart.map((item, key) => {
             total += (item.price * item.quantity)
             return (
@@ -39,11 +41,9 @@ class Checkout extends React.Component {
                         <p>Tax  $0.00</p>
                         <p>Delivery Fee  $0.00</p>
                         <p>Total  ${total.toFixed(2)}</p>
-                        <button className="checkout">
-                            <Link to="/checkout/details" style={{ textDecoration: 'none', color: 'black' }}>
+                        <Button className="checkout" href="/checkout/details" >
                                 Checkout
-                                    </Link>
-                        </button>
+                        </Button>
                     </div>
                     <div className="checkoutCart">
                         <Title title="Your Cart" />
@@ -54,9 +54,10 @@ class Checkout extends React.Component {
         } else {
             return (
                 <div>
-                    <p className="emptyCart">
+                    <div className="emptyCart" style={{paddingBottom: "15vh"}}>
                         <Title title="Your cart is empty" />
-                    </p>
+                        <Button variant="contained" color="primary" href="/menu" style={{width: "15%", textAlign: "center", display: "block", margin: "0 auto"}}>Browse the menu</Button>
+                    </div>
                 </div>
             )
         }

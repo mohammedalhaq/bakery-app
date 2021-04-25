@@ -6,7 +6,7 @@ function About() {
     return (
         <div>
             <Title title="About" />
-            <div className='columns' style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20 }}>
+            <div className='columns' style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20, paddingBottom: "15vh" }}>
                 <div>
                     <img className="image" src='owner.jpg' />
                 </div>

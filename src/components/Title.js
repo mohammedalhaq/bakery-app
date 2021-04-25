@@ -9,10 +9,10 @@ class Title extends React.Component {
     render() {
         const header = {
             textAlign: 'center',
-            fontSize: 'large',
+            fontSize: '1.5rem',
             paddingTop: '2rem',
             textTransform: 'uppercase',
-            fontFamily: 'Fjalla One'
+            fontFamily: 'Rozanova'
         }
     
         return (

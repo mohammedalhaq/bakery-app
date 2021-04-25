@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Router>
+        <Router style={{ paddingBottom: "15vh" }}>
           <Header />
           <Switch>
             <Route exact path="/">
@@ -38,6 +38,7 @@ class App extends React.Component {
           </Switch>
           <Footer />
         </Router>
+
       </div>
     );
   }

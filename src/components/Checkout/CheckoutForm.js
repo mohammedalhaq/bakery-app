@@ -46,7 +46,7 @@ class CheckoutForm extends React.Component {
         });
         if (this.state.complete == false) {
             return (
-                <div >
+                <div style={{ paddingBottom: "15vh" }}>
                     <Title title="Checkout" />
                     <div style={{ marginTop: '2rem' }}>
                         <div className="summary" style={{ paddingBottom: '4rem', height: 'fitContent' }}>
@@ -90,7 +90,7 @@ class CheckoutForm extends React.Component {
             )
         } else {
             return (
-                <div> 
+                <div>
                     <Title title="Your order has been placed" />
                 </div>
             )

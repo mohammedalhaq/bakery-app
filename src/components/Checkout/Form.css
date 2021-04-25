@@ -37,6 +37,12 @@
     margin: auto;
     margin-bottom: 0.5rem;
     width: 15%;
+    font-family: 'Rozanova';
+}
+
+.form input[type='text']{
+    float: right;
+    padding: 0.5vh 0 0.5vh 0;
 }
 
 .form input[type='submit']{

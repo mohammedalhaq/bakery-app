@@ -6,8 +6,8 @@
 }
 
 .checkoutCart .cartItem{
-    background-color: rgb(216, 216, 216);
-    border-radius: 5px;
+    
+    box-shadow: 0 0 5px #ccc;
 }
 
 .checkoutCart .cartImg {
@@ -15,7 +15,6 @@
     padding-right: 2rem;
     float: left;
     height: 10rem;
-    border-radius: 5px;
     object-fit: cover;
 }
 
@@ -29,11 +28,17 @@
 
 .checkoutCart .emptyCart{
     margin-bottom: 4rem;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    
 }
 
 .checkoutCart .cartName{
     font-weight: 500;
     padding-top: 0.5rem;
+    
+    text-transform: uppercase;
 }
 
 .checkoutCart .cartRemove{

@@ -14,9 +14,9 @@ function CartItem(props) {
                 {props.summary === false && <button className="cartRemove" onClick={() => dispatch(removeFromCart(cartItem))} style={{ display: 'inline' }}>Remove</button>}
                 <p className="cartPrice">${(props.price * props.quantity).toFixed(2)}</p>
                 {props.summary === false && <div style={{ display: 'inline' }}>
-                    <button className='quantity' onClick={() => dispatch(addOne(cartItem))} style={{ marginRight: '0.5rem', borderRadius: '50%', border: 'none', width: '3vh', height: '3vh' }}>+</button>
-                    {props.quantity}
-                    <button className='quantity' onClick={() => dispatch(removeOne(cartItem))} style={{ marginLeft: '0.5rem', borderRadius: '50%', border: 'none', width: '3vh', height: '3vh' }}>-</button>
+                    <button className='quantity' onClick={() => dispatch(removeOne(cartItem))} style={{ marginRight: '0.5rem',  backgroundColor: "rgb(74, 74, 88)", color: "white", border: 'none', width: '3vh', height: '3vh' }}>-</button>
+                     {props.quantity} 
+                    <button className='quantity' onClick={() => dispatch(addOne(cartItem))} style={{  marginLeft: '0.5rem', backgroundColor: "rgb(74, 74, 88)", color: "white", border: 'none', width: '3vh', height: '3vh' }}>+</button>
                 </div>}
                 {props.summary === true && <p>Quantity: {props.quantity}</p>}
             </div>

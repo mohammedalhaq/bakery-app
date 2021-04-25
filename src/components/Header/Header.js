@@ -11,6 +11,9 @@ function Header() {
         <div className="headerMain">
             <nav>
                 <ul>
+                    <a href="/">
+                    <img src="./logo.PNG" style={{ padding: "2vh", left: "0", top: "0", position: "absolute", width: "5vh" }} />
+                    </a>
                     <li>
                         <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
                             Home
@@ -31,7 +34,7 @@ function Header() {
                             Contact
                                 </Link>
                     </li>
-                    <li style={{float: "right", marginTop: "-2rem"}}>
+                    <li style={{ float: "right", marginTop: "-2rem" }}>
                         <Link to="/checkout" style={{ textDecoration: 'none', color: 'black' }}>
                             Your Cart ({numItems})
                             </Link>
