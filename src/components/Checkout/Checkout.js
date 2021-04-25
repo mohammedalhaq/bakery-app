@@ -23,11 +23,11 @@ class Checkout extends React.Component {
     }
 
     render() {
-        total=0;
+        total = 0;
         const cartItems = this.props.cart.map((item, key) => {
             total += (item.price * item.quantity)
             return (
-                <CartItem key={key} id={item.id} name={item.name} description={item.description} price={item.price} photo={item.photo} quantity={item.quantity} summary={false}/>
+                <CartItem key={key} id={item.id} name={item.name} description={item.description} price={item.price} photo={item.photo} quantity={item.quantity} summary={false} />
             )
         });
 
@@ -41,9 +41,11 @@ class Checkout extends React.Component {
                         <p>Tax  $0.00</p>
                         <p>Delivery Fee  $0.00</p>
                         <p>Total  ${total.toFixed(2)}</p>
-                        <Button className="checkout" href="/checkout/details" >
+                        <Link to="/checkout/details" style={{ textDecoration: "none", display: "block" }}>
+                            <Button className="checkout">
                                 Checkout
-                        </Button>
+                                    </Button>
+                        </Link>
                     </div>
                     <div className="checkoutCart">
                         <Title title="Your Cart" />
@@ -54,9 +56,9 @@ class Checkout extends React.Component {
         } else {
             return (
                 <div>
-                    <div className="emptyCart" style={{paddingBottom: "15vh"}}>
+                    <div className="emptyCart" style={{ paddingBottom: "15vh" }}>
                         <Title title="Your cart is empty" />
-                        <Button variant="contained" color="primary" href="/menu" style={{width: "15%", textAlign: "center", display: "block", margin: "0 auto"}}>Browse the menu</Button>
+                        <Button variant="contained" color="primary" href="/menu" style={{ width: "15%", textAlign: "center", display: "block", margin: "0 auto" }}>Browse the menu</Button>
                     </div>
                 </div>
             )

@@ -29,9 +29,6 @@ class CheckoutForm extends React.Component {
         this.setState({
             complete: true
         });
-        return (
-            <Redirect to="/" />
-        )
     }
 
     handleChange(e) {
